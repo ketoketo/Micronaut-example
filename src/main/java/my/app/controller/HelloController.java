@@ -10,4 +10,9 @@ public class HelloController {
     public String index() {
         return "hello world!!";
     }
+
+    @Get(uri = "/{path}",processes = MediaType.TEXT_PLAIN)
+    public String index(String path) {
+        return path;
+    }
 }
